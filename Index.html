@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clue Game</title>
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Who killed Mr. Marist?</h1>
+    <button id="revealButton">Reveal Mystery</button>
+    <p id="mysteryOutput"></p>
+  </div>
+
+  <script src="Cards.js"></script>
+  <script>
+    document.getElementById('revealButton').addEventListener('click', function() {
+      const mystery = pickMystery();
+      const result = revealMystery(mystery);
+      document.getElementById('mysteryOutput').textContent = result;
+    });
+  </script>
+</body>
+</html>
